@@ -47,14 +47,11 @@ VMAF Instalattion:
 
 - wget https://github.com/Netflix/vmaf/archive/v1.5.3.tar.gz
 - tar -xf  v1.5.3.tar.gz
-cd vmaf-1.5.3/libvmaf/
-meson build --buildtype release
-ninja -vC build
-ninja -vC build test
-ninja -vC build install
-
-
-pip3 install numpy
+- cd vmaf-1.5.3/libvmaf/
+- meson build --buildtype release
+- ninja -vC build
+- ninja -vC build test
+- ninja -vC build install
 
 
 2. Example:
