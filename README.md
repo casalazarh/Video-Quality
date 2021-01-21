@@ -32,9 +32,9 @@ apt-get install --no-install-recommends\
     yasm -y
     
 sudo -i
-curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
-python3 get-pip.py
-python3 -m pip install meson
+- curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
+- python3 get-pip.py
+- python3 -m pip install meson
 
 
 FFMPEG Static Installation:
