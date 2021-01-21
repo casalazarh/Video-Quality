@@ -46,7 +46,7 @@ Reporte de pruebas de calidad de video para distintos escenarios
 - sudo mkdir /usr/local/share/model
 - sudo mv  ffmpeg-git-20210110-amd64-static/model/* /usr/local/share/model/
 
-### VMAF Instalattion (Optional) - To use the c library directly:
+### VMAF Instalation (Optional) - To use the c library directly:
 
 - wget https://github.com/Netflix/vmaf/archive/v1.5.3.tar.gz
 - tar -xf  v1.5.3.tar.gz
