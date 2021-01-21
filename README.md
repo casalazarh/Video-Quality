@@ -54,12 +54,12 @@ Reporte de pruebas de calidad de video para distintos escenarios
 - ninja -vC build install
 
 
-## Examples:
+### Examples:
 
-** ffmpeg -i HBO_HD_RxSat27Oc2020_5min.ts -i HBO_HD_1080-5M-ref.ts -filter_complex "[0:v]select=gt(n\,0),setpts=PTS-STARTPTS[main]; [1:v]select=gt(n\,1),setpts=PTS-STARTPTS[ref]; [main][ref]libvmaf=psnr=1:log_path=HBO_HD_1080_1.json:log_fmt=json" -frames:v 5000 -f null - **
+*ffmpeg -i HBO_HD_RxSat27Oc2020_5min.ts -i HBO_HD_1080-5M-ref.ts -filter_complex "[0:v]select=gt(n\,0),setpts=PTS-STARTPTS[main]; [1:v]select=gt(n\,1),setpts=PTS-STARTPTS[ref]; [main][ref]libvmaf=psnr=1:log_path=HBO_HD_1080_1.json:log_fmt=json" -frames:v 5000 -f null -*
 
 
-## Results:
+### Results:
 | Channel name |	Config |	Bitrate (Mbps) | Lookahead | GOP (sec) | B-frames | Profile | Level | Adaptive quantization | Slides | %GPU | MEM (GB) | VMAF | PSNR |
 | ------------- |	------------- |	------------- | ------------- | ------------- | ------------- | ------------- | ------------- | ------------- | ------------- | ------------- | ------------- | ------------- | ------------- |
 | HBO HD | config/ref/HBO_HD_1080p-5Mbps-ref.xml | 5 | Medium |	2 |	3 |	High | Auto |	off |	4 | 16 | 1.2 | 98.38 | 60 |
