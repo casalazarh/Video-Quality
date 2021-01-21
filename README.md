@@ -10,9 +10,9 @@ Reporte de pruebas de calidad de video para distintos escenarios
 
 ### Prerequisites:
 
-- apt update 
-- apt install pkg-config -y
-- apt-get install --no-install-recommends\
+- sudo apt update 
+- sudo apt install pkg-config -y
+- sudo apt-get install --no-install-recommends\
     ninja-build \
     python3 \
     python3-pip \
@@ -35,13 +35,16 @@ Reporte de pruebas de calidad de video para distintos escenarios
 - curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
 - python3 get-pip.py
 - python3 -m pip install meson
+- exit
 
 
 ### FFMPEG Static Installation:
 
 - wget https://johnvansickle.com/ffmpeg/builds/ffmpeg-git-amd64-static.tar.xz
-- tar xvf ffmpeg-git-amd64-static.tar.xz
-- sudo mv ffmpeg-git-20210110-amd64-static/ffmpeg fffmpeg-git-20210110-amd64-static/ffprobe  /usr/local/bin/
+- tar -xvf ffmpeg-git-amd64-static.tar.xz
+- sudo mv ffmpeg-git-20210110-amd64-static/ffmpeg ffmpeg-git-20210110-amd64-static/ffprobe  /usr/local/bin/
+- sudo mkdir /usr/local/share/model
+- sudo mv  ffmpeg-git-20210110-amd64-static/model/* /usr/local/share/model/
 
 ### VMAF Instalattion:
 
