@@ -59,7 +59,7 @@ Reporte de pruebas de calidad de video para distintos escenarios
 
 ### Examples:
 
-*ffmpeg -i HBO_HD_RxSat27Oc2020_5min.ts -i HBO_HD_1080-5M-ref.ts -filter_complex "[0:v]select=gt(n\,0),setpts=PTS-STARTPTS[main]; [1:v]select=gt(n\,0),setpts=PTS-STARTPTS[ref]; [main][ref]libvmaf=psnr=1:log_path=prueba.json:log_fmt=json" -frames:v  100 -f null -*
+*ffmpeg -i HBO_HD_RxSat27Oc2020_5min.ts -i HBO_HD_1080-5M-ref.ts -filter_complex "[0:v]select=gt(n\\,0),setpts=PTS-STARTPTS[main]; [1:v]select=gt(n\\,0),setpts=PTS-STARTPTS[ref]; [main][ref]libvmaf=psnr=1:log_path=prueba.json:log_fmt=json" -frames:v  100 -f null -*
 
 
 ### Results:
