@@ -64,10 +64,3 @@ Reporte de pruebas de calidad de video para distintos escenarios
 *ffmpeg -i HBO_HD_RxSat27Oc2020_5min.ts -i HBO_HD_720-2.5M-ref.ts -filter_complex "[0:v]select=gt(n\\,0),setpts=PTS-STARTPTS[main]; [1:v]select=gt(n\\,1),setpts=PTS-STARTPTS,scale=1920x1080:flags=bicubic[ref]; [main][ref]libvmaf=psnr=1:log_path=prueba7200_1.json:log_fmt=json:n_threads=100" -frames:v 100 -f null -*
 
 
-### Results:
-| Channel name |	Config |	Bitrate (Mbps) | Lookahead | GOP (sec) | B-frames | Profile | Level | Adaptive quantization | Slides | %GPU | MEM (GB) | VMAF | PSNR |
-| ------------- |	------------- |	------------- | ------------- | ------------- | ------------- | ------------- | ------------- | ------------- | ------------- | ------------- | ------------- | ------------- | ------------- |
-| HBO HD | config/ref/HBO_HD_1080p-5Mbps-ref.xml | 5 | Medium |	2 |	3 |	High | Auto |	off |	4 | 16 | 1.2 | 98.38 | 60 |
-| HBO HD | HBO_1080p_1.ts | 5 | High |	2 |	3 |	High | Auto |	off |	4 | 16 | 1.2 | 98.38 | 60 |
-
-
